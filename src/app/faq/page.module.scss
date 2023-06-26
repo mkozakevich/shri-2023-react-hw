@@ -1,0 +1,25 @@
+.expandable-block {
+  margin-top: 16px;
+
+  &:first-of-type {
+    margin-top: 24px;
+  }
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer {
+  margin-top: 16px;
+  line-height: 24px;
+}
+
+.arrow {
+  cursor: pointer;
+
+  &_rotated {
+    transform: rotate(0.5turn);
+  }
+}
