@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+
+.film {
+  margin-bottom: 16px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__info {
+    margin-left: 24px;
+    width: 100%;
+  }
+
+  &__image {
+    border-radius: 8px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  width: 16px;
+  height: 16px;
+  background-color: $button_active;
+  border: none;
+  margin: 0 8px;
+  color: $text_light;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &_active:hover {
+    background-color: $button_hover;
+  }
+
+  &_disabled {
+    background-color: $button_disabled;
+  }
+}
+
+.counter-box {
+    display: flex;
+    align-items: center;
+}

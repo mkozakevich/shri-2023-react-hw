@@ -10,7 +10,6 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
   font-family: "Roboto";
   background-color: $background_medium;
 }
@@ -34,6 +33,7 @@ footer {
 
 header {
   position: sticky;
+  top: 0;
   font-weight: 700;
   font-size: 32px;
 }
@@ -55,6 +55,11 @@ main {
 
   &_3 {
     font-size: 24px;
+    font-weight: 600;
+  }
+
+  &_4 {
+    font-size: 20px;
     font-weight: 600;
   }
 }

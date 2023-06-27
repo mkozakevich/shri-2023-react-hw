@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+
+.film {
+  display: flex;
+}
+
+.info {
+  margin-left: 32px;
+}
+
+.property {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 24px;
+
+  &:first-of-type {
+    margin-top: 24px;
+  }
+}
+
+.description {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.review {
+  margin-top: 24px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__info {
+    width: 100%;
+    margin-left: 32px;
+  }
+
+  &__rating {
+    font-size: 20px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__image {
+    border-radius: 8px;
+  }
+}
