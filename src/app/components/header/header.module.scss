@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.total {
+  width: 28px;
+  height: 28px;
+  background-color: $button_active;
+  color: $text_light;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 4px;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.cart-box {
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  margin-top: 8px;
+}

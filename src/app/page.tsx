@@ -1,19 +1,25 @@
-import { Film } from "@/shared/interfaces/Film";
-import styles from './page.module.scss'
-import Item from "./components/item/item";
+'use client';
 
-export default async function Home() {
-  let films: Film[] = [];
-  await fetch("http://localhost:3001/api/movies")
-    .then((data) => data.json())
-    .then((data) => (films = data)).catch(e => console.log(e));
+import { Film } from "@/shared/interfaces/Film";
+import styles from "./page.module.scss";
+import Item from "./components/item/item";
+import { useGetMoviesQuery } from "@/store/services/movieApi";
+
+export default function Home() {
+  const { data, isLoading } = useGetMoviesQuery(void 0);
+  const films: Film[] = data;
+
   return (
     <>
-      {films.map((film, idx) => (
-        <div key={idx} className={styles.film}>
-          <Item film={film}></Item>
-        </div>
-      ))}
+      {isLoading ? (
+        <div>...Loading</div>
+      ) : (
+        films.map((film, idx) => (
+          <div key={idx} className={styles.film}>
+            <Item film={film}></Item>
+          </div>
+        ))
+      )}
     </>
   );
 }

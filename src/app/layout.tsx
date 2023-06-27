@@ -1,8 +1,7 @@
 import Link from "next/link";
 import "./globals.scss";
 import { StoreProvider } from "@/store/storeProvider";
-import cartIcon from '../shared/icons/cart.svg'
-import Image from "next/image";
+import { Header } from "./components/header/header";
 
 export const metadata = {
   title: "Билетопоиск",
@@ -17,13 +16,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <header>
-          <Link href="/">Билетопоиск</Link>
-          <Image src={cartIcon} alt="Cart" width={32} height={32}></Image>
-        </header>
-        <main>
-          <StoreProvider>{children}</StoreProvider>
-        </main>
+        <StoreProvider>
+          <Header></Header>
+          <main>{children}</main>
+        </StoreProvider>
         <footer>
           <Link href="/faq">Вопросы-ответы</Link>
           <Link href="/about">О нас</Link>

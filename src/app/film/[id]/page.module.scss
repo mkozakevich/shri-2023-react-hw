@@ -45,7 +45,21 @@
     margin-bottom: 16px;
   }
 
-  &__image {
+  &__image-box {
+    background-color: $background_gray;
     border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    padding: 34px;
   }
+}
+
+.poster {
+  border-radius: 8px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
